@@ -9,8 +9,7 @@ def Download(url):
     yd = yt.streams.get_highest_resolution()
 
     metadata = {'title': yd.title,
-                'hour': datetime.now(),
-                'date': datetime.now().strftime("%d-%m-%Y")
+                'time': datetime.now().strftime("%d-%m-%Y")
                 }
     # Create Downloads folder if it doesn't already exist
     if not os.path.exists("../Downloads"):

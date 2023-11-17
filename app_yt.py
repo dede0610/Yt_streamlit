@@ -13,7 +13,7 @@ if url:
         st.write(f"Download of : {metadata['title']} is over ! 😀")
 
     with open('log.txt', 'a') as f:
-        f.write(f"{metadata['date']}, {metadata['hour']}, {metadata['title']}\n")
+        f.write(f"{metadata['time']}, Title : {metadata['title']}\n")
 
 
 #st.image('image/OIP.jpeg')
