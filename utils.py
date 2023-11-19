@@ -1,22 +1,28 @@
-from pytube import YouTube
-from datetime import datetime
 import os
 
-def Download(url):
+from pytube import YouTube
+from datetime import datetime
+import streamlit as st
+
+
+def Download(url, folder_path):
     metadata = {}
 
     yt = YouTube(url, use_oauth=True, allow_oauth_cache=True)
     yd = yt.streams.get_highest_resolution()
 
     metadata = {'title': yd.title,
-                'time': datetime.now().strftime("%d-%m-%Y")
+                'time': datetime.now()
                 }
-    # Create Downloads folder if it doesn't already exist
-    if not os.path.exists("../Downloads"):
-        os.makedirs("../Downloads")
 
+    if not os.path.isdir(folder_path):
+        st.error('The provided folder does not exist. Please provide a valid folder path.')
+        return
 
-    # Download video to Downloads folder
-    yd.download(os.path.join(os.getcwd(), "../Downloads"))
+    file_path = os.path.join(folder_path, metadata['title'])
+
+    # Download video to in the appropriate folder
+    yd.download(file_path)
 
     return metadata
+
