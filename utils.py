@@ -26,7 +26,7 @@ def download(url, folder_path):
         )
         return
 
-    file_path = os.path.join(folder_path, metadata["title"])
+    file_path = os.path.join(folder_path, "videos_yt")
 
     # Download video to in the appropriate folder
     yd.download(file_path)
