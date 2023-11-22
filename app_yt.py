@@ -1,5 +1,5 @@
 import streamlit as st
-from utils import download
+from yt_download import download
 
 st.title("YouTube Downloader")
 url = st.text_input(label="Enter an url:")
