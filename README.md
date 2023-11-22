@@ -1,4 +1,9 @@
-# Download YouTUbe videos
+# Download YouTube videos
 
-Simple web app to be able to download Youtube videos on your machine. You just need the url on the video and the path to the folder in which you want the video to be downloaded.
-The app is built in python: it uses streamlit for the front-end and pytube API for the back-end
+Simple web app to allow user to download YouTube videos on their local machine. 
+The user needs the url of the video and the path to the folder in which he wants the video to be downloaded.
+
+## Stack
+The app is built in python: 
+- Streamlit for the front-end
+- Pytube API for the back-end
