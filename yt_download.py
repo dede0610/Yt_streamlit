@@ -13,7 +13,9 @@ def download(url, folder_path):
 
     metadata = {}
 
-    st.write("Downloading...")
+    # st.write("Downloading...")
+    print("Downloading...")
+
 
     yt = YouTube(url, use_oauth=True, allow_oauth_cache=True)
     yd = yt.streams.get_highest_resolution()
@@ -29,6 +31,6 @@ def download(url, folder_path):
     file_path = os.path.join(folder_path, "videos_yt")
 
     # Download video to in the appropriate folder
-    yd.download(file_path)
+    yd.download(output_path=file_path, filename=metadata["title"]+".mp4")
 
     return metadata
