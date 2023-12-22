@@ -1,0 +1,8 @@
+# This tells Docker to ignore the entire .git directory.
+.git
+
+# This line ignores the Dockerfile itself so it won't be included in the image.
+Dockerfile
+
+# We ignore the readme file
+README.md
