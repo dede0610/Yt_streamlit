@@ -1,7 +1,6 @@
 # Download YouTube videos
 
-Simple web app to allow user to download YouTube videos on their local machine. 
-The user needs the url of the video and the path to the folder in which he wants the video to be downloaded.
+Simple Streamlit web app to allow a user to download YouTube videos on their local machine based on the URL.
 
 ## Stack
 The app is built in python: 
