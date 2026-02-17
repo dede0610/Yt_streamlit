@@ -1,36 +1,35 @@
 import os
+import re
 from datetime import datetime
 
-from pytube import YouTube
+from pytubefix import YouTube
 import streamlit as st
 
 
-def download(url, folder_path):
+def _safe_filename(name):
+    # Windows-illegal characters: \ / : * ? " < > |
+    name = re.sub(r'[\\/*?:"<>|]', "_", name)
+    name = re.sub(r"\s+", " ", name).strip()
+    return name[:120]
+
+
+def download(url, folder_path=os.getcwd()):
     """
-    function that takes an url and a forder paths to download youtube videos online on local on your pc
+    function that takes an URL and a folder path to download online youtube videos on your laptop locally
     return a dictionary object with title and date of downloading
     """
 
-    metadata = {}
+    yt = YouTube(url)
+    print(f"Video title: {yt.title}")
 
-    # st.write("Downloading...")
-    print("Downloading...")
-
-
-    yt = YouTube(url, use_oauth=True, allow_oauth_cache=True)
     yd = yt.streams.get_highest_resolution()
 
-    metadata = {"title": yd.title, "time": datetime.now()}
+    st.write(f"Downloading video: {yd.title}...")
 
-    if not os.path.isdir(folder_path):
-        st.error(
-            "The provided folder does not exist. Please provide a valid folder path."
-        )
-        return
+    filename = _safe_filename(yd.title) + ".mp4"
 
-    file_path = os.path.join(folder_path, "videos_yt")
+    # Download video 
+    yd.download(output_path=folder_path, filename=filename)
+    st.success(f"Download is over ! 😀")
 
-    # Download video to in the appropriate folder
-    yd.download(output_path=file_path, filename=metadata["title"]+".mp4")
-
-    return metadata
+    return filename
