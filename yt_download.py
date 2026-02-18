@@ -24,11 +24,12 @@ def download(url, folder_path=os.getcwd()):
 
     yd = yt.streams.get_highest_resolution()
 
-    st.write(f"Downloading video on the server: {yd.title}...")
+    st.write(f"Downloading video: {yd.title}...")
 
     filename = _safe_filename(yd.title) + ".mp4"
 
+    # Download video 
     yd.download(output_path=folder_path, filename=filename)
-    st.success(f"Click below to download the video on your laptop! 😀")
+    st.success(f"Download is over ! 😀")
 
     return filename
