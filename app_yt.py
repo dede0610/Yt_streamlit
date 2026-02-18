@@ -25,4 +25,4 @@ if url:
         st.download_button(label="Download video", data=read_binary_file(filepath), file_name=filename, mime='video/mp4') 
 
     except Exception as e:
-        print(e)
+        st.error(f"Error: {e}")
