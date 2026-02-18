@@ -21,9 +21,11 @@ To run the Youtube Downloader run:
 ```sh
 git clone https://github.com/dede0610/Yt_streamlit.git
 ``` 
+Navigate to the project folder:
 ```sh
 cd Yt_streamlit
 ``` 
+Create a virtual environment:
 ```sh
 python -m venv venv
 ```
@@ -31,10 +33,11 @@ Then activate the environment (windows):
 ```sh
 .venv\Scripts\Activate.ps1
 ``` 
-
+Install all the dependencies to run the project:
 ```sh
 pip install -r requirements.txt
 ```  
+Launch the app:
 ```sh
 streamlit run app_yt.py
 ``` 
