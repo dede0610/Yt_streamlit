@@ -19,7 +19,7 @@ def download(url, folder_path=os.getcwd()):
     return a dictionary object with title and date of downloading
     """
 
-    yt = YouTube(url)
+    yt = YouTube(url, use_oauth=False, allow_oauth_cache=False)
     print(f"Video title: {yt.title}")
 
     yd = yt.streams.get_highest_resolution()
@@ -29,7 +29,7 @@ def download(url, folder_path=os.getcwd()):
     filename = _safe_filename(yd.title) + ".mp4"
 
     # Download video 
-    yd.download(output_path=folder_path, filename=filename, use_oauth=False, allow_oauth_cache=False)
+    yd.download(output_path=folder_path, filename=filename)
     st.success(f"Click below to download your video on your machine! 😀")
 
     return filename
