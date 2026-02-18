@@ -5,6 +5,7 @@ from datetime import datetime
 from pytubefix import YouTube
 import streamlit as st
 
+
 def _safe_filename(name):
     # Windows-illegal characters: \ / : * ? " < > |
     name = re.sub(r'[\\/*?:"<>|]', "_", name)
@@ -27,7 +28,7 @@ def download(url, folder_path):
 
     filename = _safe_filename(yd.title) + ".mp4"
 
-    # Download video 
+    # Download video
     yd.download(output_path=folder_path, filename=filename)
     st.success(f"Click below to download your video on your machine! 😀")
 
