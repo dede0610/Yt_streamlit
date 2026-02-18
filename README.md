@@ -6,3 +6,31 @@ Simple Streamlit web app to allow a user to download YouTube videos on their loc
 The app is built in python: 
 - Streamlit for the front-end
 - Pytube API for the back-end
+
+
+
+# Set up
+
+## Prerequisites
+To use this template, you will need:
+* [Python 3.12](https://www.python.org/downloads/windows/)
+* git 
+  
+## How to run the project
+To run the Youtube Downloader run:
+```sh
+git clone https://github.com/dede0610/Yt_streamlit.git
+``` 
+```sh
+cd Yt_streamlit
+``` 
+```sh
+python -m venv venv
+```
+```sh
+pip install -r requirements.txt
+```  
+```sh
+streamlit run app_yt.py
+``` 
+Your web browser should open the streamlit interface from where you can enter the Youtube URL of the video to be downloaded.
