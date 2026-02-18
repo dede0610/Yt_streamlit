@@ -12,7 +12,7 @@ The app is built in python:
 # Set up
 
 ## Prerequisites
-To use this template, you will need:
+To use this project, you will need:
 * [Python 3.12](https://www.python.org/downloads/windows/)
 * git 
   
