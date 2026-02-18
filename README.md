@@ -27,6 +27,11 @@ cd Yt_streamlit
 ```sh
 python -m venv venv
 ```
+Then activate the environment (windows):
+```sh
+.venv\Scripts\Activate.ps1
+``` 
+
 ```sh
 pip install -r requirements.txt
 ```  
