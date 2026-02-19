@@ -15,8 +15,8 @@ def _safe_filename(name):
 
 def download(url, folder_path):
     """
-    function that takes an URL and a folder path to download online youtube videos on your laptop locally
-    return a the name of the video downloaded.
+    function that takes an URL and a folder path to download online youtube videos on your laptop.
+    return the name of the video downloaded.
     """
 
     yt = YouTube(url, use_oauth=False, allow_oauth_cache=False)

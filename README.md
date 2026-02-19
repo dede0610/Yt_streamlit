@@ -39,6 +39,6 @@ pip install -r requirements.txt
 ```  
 Launch the app:
 ```sh
-streamlit run app_yt.py
+streamlit run app.py
 ``` 
 Your web browser should open the streamlit interface from where you can enter the Youtube URL of the video to be downloaded.
