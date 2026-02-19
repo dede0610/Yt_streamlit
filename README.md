@@ -14,7 +14,7 @@ The app is built in python:
 ## Prerequisites
 To use this project, you will need:
 * [Python 3.12](https://www.python.org/downloads/windows/)
-* git 
+* [git](https://git-scm.com/)
   
 ## How to run the project
 To run the Youtube Downloader run:
