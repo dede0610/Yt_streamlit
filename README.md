@@ -23,7 +23,7 @@ git clone https://github.com/dede0610/Yt_streamlit.git
 ``` 
 Navigate to the project folder:
 ```sh
-cd Yt_streamlit
+cd Youtube_Downloader
 ``` 
 Create a virtual environment:
 ```sh
